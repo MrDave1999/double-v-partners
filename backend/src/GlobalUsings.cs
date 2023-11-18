@@ -1,0 +1,27 @@
+﻿global using System.Data;
+global using System.Text;
+global using System.ComponentModel;
+global using System.IdentityModel.Tokens.Jwt;
+global using System.Security.Claims;
+global using Microsoft.OpenApi.Models;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.AspNetCore.Mvc.Authorization;
+global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.IdentityModel.Tokens;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using MySqlConnector;
+global using Dapper;
+global using SimpleResults;
+global using DotEnv.Core;
+global using FluentValidation;
+global using FluentValidation.Results;
+global using PasswordHasher = BCrypt.Net.BCrypt;
+global using EnumsNET;
+
+global using Double.Partners.Persistence;
+global using Double.Partners.Persistence.Configurations;
+global using Double.Partners.Extensions;
+global using Double.Partners.Entities;
+global using Double.Partners.Resources;
