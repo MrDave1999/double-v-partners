@@ -6,10 +6,10 @@
 public class PersonController : ControllerBase
 {
     [HttpPost]
-    public async Task<Result> Create([FromBody]CreatePersonRequest request, [FromServices]CreatePersonUseCase useCase)
+    public async Task<Result> Create([FromBody]CreatePersonRequest request, CreatePersonUseCase useCase)
         => await useCase.ExecuteAsync(request);
 
     [HttpGet]
-    public async Task<IEnumerable<GetPersonsResponse>> GetAll([FromServices]GetPersonsUseCase useCase)
+    public async Task<IEnumerable<GetPersonsResponse>> GetAll(GetPersonsUseCase useCase)
         => await useCase.ExecuteAsync();
 }
