@@ -23,7 +23,7 @@ This project was generated with [dotnet CLI](https://learn.microsoft.com/en-us/d
 
 ### Installation
 
-- Install MariaDb 10 and set the user as root.
+- Install [MariaDb Server](https://mariadb.com/downloads/) and set the user as root.
 - Run the [double-partners.sql](https://github.com/MrDave1999/double-v-partners/blob/master/backend/double-partners.sql) script to build the database and use the default credentials.
 - Create an `.env` file in `/backend/src` directory. Example: `copy .env.example .env`.
 - Configure the connection string in the `.env` file.
@@ -44,3 +44,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 ### Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+Use the default login credentials to create users or persons.
+- **User:** MrDave1999
+- **Pass:** 123456789
