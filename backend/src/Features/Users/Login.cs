@@ -8,6 +8,7 @@ public class UserLoginRequest
 
 public class UserLoginResponse
 {
+    public string UserName { get; init; }
     public string AccessToken { get; init; }
 }
 
@@ -48,6 +49,7 @@ public class UserLoginUseCase
         var accessToken = new JwtGenerator().CreateToken(user.Id, user.Name);
         var response = new UserLoginResponse
         {
+            UserName = request.UserName,
             AccessToken = accessToken
         };
 
