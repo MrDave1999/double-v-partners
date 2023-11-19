@@ -1,5 +1,6 @@
 ﻿namespace Double.Partners.Entities;
 
+[JsonConverter(typeof(JsonStringEnumConverter))]
 public enum DocumentType
 {
     [Description("CC.")]
