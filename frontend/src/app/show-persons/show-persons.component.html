@@ -1,0 +1,22 @@
+<div class="container">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Full Document</th>
+            <th scope="col">Email</th>
+            <th scope="col">Created At</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let person of persons; index as i">
+            <td>{{i + 1}}</td>
+            <td>{{person.fullName}}</td>
+            <td>{{person.fullDocument}}</td>
+            <td>{{person.email}}</td>
+            <td>{{person.createdAt}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

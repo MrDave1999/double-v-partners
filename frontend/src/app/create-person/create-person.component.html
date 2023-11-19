@@ -1,0 +1,37 @@
+<div class="container min-vh-100 d-flex justify-content-center">
+    <form>
+        <p class="h5">Create Person</p>
+        <div class="mb-3">
+            <label for="names" class="form-label">Names:</label>
+            <input type="text" class="form-control" id="names" name="names" [(ngModel)]="person.names">
+        </div>
+        <div class="mb-3">
+            <label for="lastNames" class="form-label">LastNames:</label>
+            <input type="text" class="form-control" id="lastNames" name="lastNames" [(ngModel)]="person.lastNames">
+        </div>
+        <div class="mb-3">
+            <label for="document" class="form-label">Document:</label>
+            <input type="text" class="form-control" id="document" name="document" [(ngModel)]="person.document">
+        </div>
+        <div class="mb-3">
+            <label for="documentType" class="form-label">Document type:</label>
+            <select class="form-select" name="documentType" [(ngModel)]="person.documentType">
+                <option value="1" selected>Identity Card</option>
+                <option value="2">Passport</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="person.email">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+        <div class="mb-3" *ngIf="!result.isSuccess">
+            <label for="message" class="form-label">{{result.message}}</label>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-warning" *ngFor="let error of result.errors">
+                    {{error}}
+                </li>
+              </ul>
+        </div>
+    </form>
+</div>

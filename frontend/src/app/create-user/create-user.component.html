@@ -1,0 +1,22 @@
+<div class="container min-vh-100 d-flex justify-content-center">
+    <form>
+        <p class="h5">Create User</p>
+        <div class="mb-3">
+            <label for="userName" class="form-label">UserName:</label>
+            <input type="text" class="form-control" id="userName" name="userName" [(ngModel)]="user.userName">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()">Sign up</button>
+        <div class="mb-3" *ngIf="!result.isSuccess">
+            <label for="message" class="form-label">{{result.message}}</label>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-warning" *ngFor="let error of result.errors">
+                    {{error}}
+                </li>
+              </ul>
+        </div>
+    </form>
+</div>

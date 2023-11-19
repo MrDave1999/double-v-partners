@@ -1,0 +1,10 @@
+<div class="container">
+  <h3>Hello {{userName}}!</h3>
+  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <button type="button" class="btn btn-secondary" routerLink="create-person">Create Person</button>
+    <button type="button" class="btn btn-secondary" routerLink="create-user">Create User</button>
+    <button type="button" class="btn btn-secondary" routerLink="list">List</button>
+    <button type="button" class="btn btn-secondary" (click)="onLogout()">Logout</button>
+  </div>
+</div>
+<router-outlet></router-outlet>
