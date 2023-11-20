@@ -1,5 +1,5 @@
 # double-v-partners
-A sample web application that uses .NET/Angular
+A sample web application that uses .NET/Angular.
 
 Default credentials:
 - **UserName:** MrDave1999
@@ -25,26 +25,26 @@ This project was generated with [dotnet CLI](https://learn.microsoft.com/en-us/d
 
 - Install [MariaDb Server](https://mariadb.com/downloads/) and set the user as root.
 - Run the [double-partners.sql](https://github.com/MrDave1999/double-v-partners/blob/master/backend/double-partners.sql) script to build the database and use the default credentials.
-- Create an `.env` file in `/backend/src` directory. Example: `copy .env.example .env`.
+- Create an `.env` file in `backend/src/` directory. Example: `copy .env.example .env`.
 - Configure the connection string in the `.env` file.
-- Run `dotnet run` for a dev server. Navigate to `http://localhost:5227/swagger`.
+- Run `dotnet run` for a dev server. Navigate to `http://localhost:5227/swagger/`.
 
 ## Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1.
 
-### Development server
+### Technologies used
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Angular](https://github.com/angular/angular)
+- [Bootstrap](https://github.com/twbs/bootstrap)
 
-### Code scaffolding
+### Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Run `npm install` to download the project dependencies.
+- Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
+  The application will automatically reload if you change any of the source files.
+- Use the default login credentials to create users or persons.
+  - **User:** mrdave1999
+  - **Pass:** 123456789
 
-### Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-Use the default login credentials to create users or persons.
-- **User:** MrDave1999
-- **Pass:** 123456789
