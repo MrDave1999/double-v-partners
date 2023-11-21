@@ -45,7 +45,7 @@ public class CreatePersonUseCase
     {
         ValidationResult result = new CreatePersonValidator().Validate(request);
         if (result.IsFailed())
-            return Result.Invalid(result.AsErrors());
+            return result.Invalid();
 
         var person = request.MapToPerson();
         _context.Add(person);

@@ -24,7 +24,7 @@ public class CreateUserUseCase
     {
         ValidationResult result = new CreateUserValidator().Validate(request);
         if(result.IsFailed())
-            return Result.Invalid(result.AsErrors());
+            return result.Invalid();
 
         bool userExists = await _context.Set<User>()
             .Where(u => u.Name == request.UserName)

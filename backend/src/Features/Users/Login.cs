@@ -30,7 +30,7 @@ public class UserLoginUseCase
     {
         ValidationResult result = new UserLoginValidator().Validate(request);
         if (result.IsFailed())
-            return Result.Invalid(result.AsErrors());
+            return result.Invalid();
 
         var user = await _context.Set<User>()
             .Where(u => u.Name == request.UserName)
